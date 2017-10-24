@@ -23,10 +23,15 @@ function getBalance(options) {
   })
 }
 
-function send(numToSend, options) {
+function send(address, numToSend, options) {
   if (options.parent.token) {
     throw new Error('Tokens not supported yet')
   }
+  console.log(address, numToSend)
+  web3.eth.sendTransaction({to: address, value: web3.toWei(numToSend, 'ether')}, (error, txHash) =>{
+    console.log('TxHash:', txHash)
+  })
+
 }
 
 function wrap(cmd, options, action) {
@@ -38,7 +43,7 @@ program
   .action(getBalance)
 
 program
-  .command('send [number]')
+  .command('send [address] [number]')
   .description('Send the specified number of tokens (default ether)')
   .action(send)
 
