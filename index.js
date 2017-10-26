@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const qrcode = require('qrcode-terminal')
 const Connect = require('uport-connect').Connect
 const program = require('commander')
@@ -32,12 +34,16 @@ function getBalance(options) {
   function tokenBalance(address) {
     let token = Token.at(options.parent.token)
     token.balanceOf(address, (error, balance) => {
-      console.log('Balance:', balance)
+      console.log('Balance:', balance.toString())
     })
   }
 }
 
 function send(address, numToSend, options) {
+  if (!address || !numToSend) {
+    console.log('Please provide address and amount')
+    return
+  }
   if (options.parent.token) {
     sendToken()
   } else {
@@ -72,3 +78,7 @@ program
   .version('0.0.1')
   .option('-t --token <token-address>', 'Which token to use')
   .parse(process.argv)
+
+if (!process.argv.slice(2).length) {
+    program.outputHelp()
+}

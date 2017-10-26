@@ -1,8 +1,9 @@
 {
   "name": "uport-wallet-cli",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A uport cli wallet for ether and erc20 tokens",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
