@@ -1,0 +1,19 @@
+name: uport-wallet-cli
+version: git
+summary: Cli ether and ERC20 wallet for uport
+description: |
+  Self-sovereign ID enables you to collect verifications, log-in without
+  passwords, digitally sign transactions, and interact with Ethereum
+  applications.
+
+apps:
+  uport-wallet-cli:
+    command: uport-wallet-cli
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  uport-wallet-cli:
+    source: .
+    plugin: nodejs
