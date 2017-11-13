@@ -1,6 +1,6 @@
 {
   "name": "uport-wallet-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A uport cli wallet for ether and erc20 tokens",
   "main": "index.js",
   "bin": "index.js",

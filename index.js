@@ -64,6 +64,8 @@ function send(address, numToSend, options) {
   }
 }
 
+console.log("--- WARNING: this tool is currently only running on the rinkeby testnet ---")
+
 program
   .command('balance')
   .description('Get the balance of the specified token (default ether)')
