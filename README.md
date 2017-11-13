@@ -3,9 +3,22 @@
 This is a simple ether and ERC20 wallet for uport implemented in cli.
 
 ## Install
+
+### With npm
+
 ```bash
 $ npm i -g uport-wallet-cli
 ```
+
+### With snap
+
+In any of the [supported Linux distros](https://snapcraft.io/docs/core/install):
+
+```bash
+sudo snap install uport-wallet-cli --edge --devmode
+```
+
+(Note that this is an experimental and unstable release, at the moment)
 
 ## Usage
 ```bash
