@@ -15,7 +15,7 @@ $ npm i -g uport-wallet-cli
 In any of the [supported Linux distros](https://snapcraft.io/docs/core/install):
 
 ```bash
-sudo snap install uport-wallet-cli --edge --devmode
+$ sudo snap install uport-wallet-cli --edge --devmode
 ```
 
 (Note that this is an experimental and unstable release, at the moment)
